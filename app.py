@@ -1,7 +1,7 @@
 import os
 import nest_asyncio
-import uvicorn
-from pyngrok import ngrok
+# import uvicorn
+# from pyngrok import ngrok
 from fastapi import FastAPI, File, UploadFile, Form
 import requests
 from transformers import pipeline
