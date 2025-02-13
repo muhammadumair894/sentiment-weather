@@ -4,9 +4,6 @@ import nest_asyncio
 # from pyngrok import ngrok
 from fastapi import FastAPI, File, UploadFile, Form
 import requests
-from transformers import pipeline
-
-classifier = pipeline('sentiment-analysis')
 
 
 app = FastAPI()
@@ -19,9 +16,6 @@ def home():
 def home():
     return "We are learning FastAPI "
 
-@app.get("/sentiment/{text}")
-def sentiment(text):
-    return str(classifier([text])[0]['label'])
 
 @app.get("/weather/{text}")
 def weather(text):
